@@ -35,8 +35,6 @@ yarn test:unit
 yarn lint
 ```
 
-```
-
 ## Tools Used
 
 - HTML5
@@ -47,9 +45,12 @@ yarn lint
 
 ## Credits
 
-
 [Leonteq API](https://fakerestapi.azurewebsites.net/api/v1/Books)
 
 ### Customize configuration
+
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+```
+
 ```

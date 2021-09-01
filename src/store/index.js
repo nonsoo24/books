@@ -10,7 +10,7 @@ export default new Vuex.Store({
   mutations: {
   },
   actions: {
-    getBookList: async (context) => {
+    getBookList: async () => {
       try {
         const response = await api.get('/Books');
         return Promise.resolve(response);

@@ -4,12 +4,12 @@
         <div class="card" >
             <h3>{{title}}</h3>
             <h6 class="description">{{description}}</h6>
-            <h6>{{publishDate}}</h6>
+            <h6>{{formatDate(publishDate)}}</h6>
         </div>
   </div>
 </template>
 <script>
-import moment from 'moment';
+import formatDate from '../helpers/formatDate';
 
 export default {
   name: 'Card',
@@ -26,29 +26,28 @@ export default {
       type: String,
       required: false,
     },
-    computed: {
-      formatDate(value) {
-        return moment(value).format('MMM Do YYYY');
-      },
-    },
+  },
+  methods: {
+    formatDate,
   },
 };
 </script>
 
 <style scoped>
 .card {
-    padding: 32px 32px 54px;
-    border: solid 1px #f2f2f2;
+    padding: 2rem 2rem 3.375rem;
+    border: solid 0.0625rem #f2f2f2;
     background-color: #ffffff;
     width: 15rem;
-    margin: 20px;
+    margin: 1.25rem;
     min-height: 20.313rem;
 }
 .description{
+  display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-  -webkit-line-clamp : 3 ;
+  -webkit-line-clamp : 10 ;
+  -webkit-box-orient : vertical ;
 }
 
 </style>

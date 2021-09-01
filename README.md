@@ -1,6 +1,6 @@
 # books
 
-This is a Frontend Developer Challenge for Leonteq. In this challenge Iwrite a front-end application to do the following:
+This is a Frontend Developer Challenge for Leonteq. In this challenge I was to write a front-end application to do the following:
 
 - User should see a list of books from the API, showing: 'title', 'description' and 'publish date'
 - User should be able to filter by 'title' and/or 'publish date'

@@ -34,19 +34,19 @@ export default {
   data() {
     return {
       searchQuery: null,
-      lists: [],
+      bookList: [],
       pageCount: 0,
     };
   },
   computed: {
     searchBookList() {
       if (this.searchQuery) {
-        return this.lists.filter(
+        return this.bookList.filter(
           (item) => item.title.toLowerCase().includes(this.searchQuery.toLowerCase())
         || item.publishDate.toLowerCase().includes(this.searchQuery.toLowerCase()),
         );
       }
-      return this.lists;
+      return this.bookList;
     },
   },
   mounted() {
@@ -62,7 +62,7 @@ export default {
         const response = await this.getAllBooks();
         const { status, data } = response;
         if (status === 200) {
-          this.lists = data;
+          this.bookList = data;
         }
       } catch (error) {
         alert(error);
